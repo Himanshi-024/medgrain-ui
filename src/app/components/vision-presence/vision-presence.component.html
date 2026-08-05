@@ -1,0 +1,46 @@
+<section class="section vision">
+  <div class="container">
+    <div class="vision-grid">
+      <div class="vision-card" appReveal>
+        <p class="eyebrow">Our Vision</p>
+        <h3>Quality and nutrition, in every Indian household</h3>
+        <p>
+          To make quality and nutritious food products accessible to every Indian
+          household. We aspire to build a trusted food brand that combines:
+        </p>
+        <p class="vision-card__formula">Quality + Technology + Hygiene + Nutrition + Trust</p>
+      </div>
+
+      <div class="vision-card" [appReveal]="150">
+        <p class="eyebrow">Our Mission</p>
+        <h3>Reliable, quality food — delivered consistently</h3>
+        <ul class="vision-card__list">
+          <li *ngFor="let m of missionPoints">{{ m }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="presence">
+      <div class="presence__text">
+        <p class="eyebrow">Our Presence</p>
+        <h3>Rooted in Madhya Pradesh, growing across India</h3>
+        <div class="presence__row">
+          <div>
+            <span class="presence__label">Corporate / Registered Office</span>
+            <span class="presence__value">Indore, Madhya Pradesh, India</span>
+          </div>
+          <div>
+            <span class="presence__label">Manufacturing Facility</span>
+            <span class="presence__value">Betul, Madhya Pradesh, India</span>
+          </div>
+        </div>
+      </div>
+      <div class="presence__states">
+        <span class="presence__label">Serving customers across</span>
+        <div class="presence__chips">
+          <span *ngFor="let s of states">{{ s }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

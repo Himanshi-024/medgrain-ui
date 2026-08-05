@@ -1,0 +1,124 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
+  padding: 22px 0;
+}
+
+.nav--scrolled {
+  background: rgba(250, 246, 236, 0.92);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 var(--line);
+  padding: 14px 0;
+}
+
+.nav__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 21px;
+  color: var(--husk);
+  transition: color 0.3s ease;
+}
+
+.nav--scrolled .nav__logo { color: var(--soil); }
+
+.nav__mark {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  flex-shrink: 0;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  font-size: 14.5px;
+  font-weight: 500;
+}
+
+.nav__links a {
+  color: rgba(250, 247, 238, 0.82);
+  transition: color 0.2s ease;
+}
+
+.nav--scrolled .nav__links a { color: var(--soil-soft); }
+
+.nav__links a:hover { color: var(--husk); }
+.nav--scrolled .nav__links a:hover { color: var(--soil); }
+
+.nav__cta {
+  background: var(--grain);
+  color: var(--husk) !important;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.nav__cta:hover { background: #8a4c2d; }
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  padding: 6px;
+}
+
+.nav__toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--soil);
+  display: block;
+}
+
+@media (max-width: 860px) {
+  .nav__toggle { display: flex; }
+
+  .nav__links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    background: var(--husk);
+    border-bottom: 1px solid var(--line);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav__links--open {
+    max-height: 400px;
+  }
+
+  .nav__links a {
+    width: 100%;
+    padding: 16px 24px;
+    border-top: 1px solid var(--line);
+  }
+
+  .nav__cta {
+    margin: 16px 24px;
+    text-align: center;
+    display: block;
+  }
+}

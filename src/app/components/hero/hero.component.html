@@ -1,0 +1,45 @@
+<section id="top" class="hero">
+  <div class="hero__slides" aria-hidden="true">
+    <div
+      class="hero__slide"
+      *ngFor="let slide of slides; let i = index"
+      [class.is-active]="i === activeSlide"
+      [style.background-image]="'url(' + slide + ')'"
+    ></div>
+    <div class="hero__overlay"></div>
+  </div>
+
+  <div class="container hero__inner">
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light">Sustainzy Agro Industries LLP</p>
+      <h1>Pure Grains.<br />Better Nutrition.<br /><span>Trusted Quality.</span></h1>
+      <p class="hero__sub">
+        Premium quality flour made with carefully selected grains and processed
+        with care — for homes, restaurants and food businesses across India.
+      </p>
+      <div class="hero__actions">
+        <a href="#products" class="btn btn-primary">Explore Our Products</a>
+        <a href="#contact" class="btn btn-ghost-light">Contact Us</a>
+      </div>
+      <dl class="hero__stats">
+        <div *ngFor="let s of stats">
+          <dt>{{ s.value }}{{ s.suffix }}<span *ngIf="!s.suffix">+</span></dt>
+          <dd>{{ s.label }}</dd>
+        </div>
+      </dl>
+    </div>
+  </div>
+
+  <div class="hero__dots">
+    <button
+      *ngFor="let slide of slides; let i = index"
+      [class.is-active]="i === activeSlide"
+      (click)="activeSlide = i"
+      [attr.aria-label]="'Show slide ' + (i + 1)"
+    ></button>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+    <span></span>
+  </a>
+</section>

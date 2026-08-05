@@ -1,0 +1,29 @@
+<section id="products" class="section products">
+  <div class="container">
+    <div class="section-head" appReveal>
+      <p class="eyebrow">Our Products</p>
+      <h2>Grain to flour, made for every kitchen</h2>
+      <p>From everyday atta to specialty grain flours — ideal for homes, restaurants, hotels, caterers and institutions.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product-card" *ngFor="let p of products; let i = index" [appReveal]="(i % 3) * 120">
+        <div class="product-card__top">
+          <span class="product-card__tag">{{ p.tag }}</span>
+        </div>
+        <h3>{{ p.name }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="product-card__packs" *ngIf="p.packs">
+          <span *ngFor="let size of p.packs" class="pack-chip">{{ size }}</span>
+        </div>
+
+        <ul class="product-card__uses" *ngIf="p.uses">
+          <li *ngFor="let u of p.uses">{{ u }}</li>
+        </ul>
+
+        <a href="#contact" class="product-card__link">Enquire Now →</a>
+      </article>
+    </div>
+  </div>
+</section>
