@@ -50,5 +50,15 @@
 }
 
 @media (max-width: 700px) {
-  .cine__bg { background-attachment: scroll; }
+  .cine__bg {
+    background-attachment: scroll;
+  }
+}
+
+.cine {
+  min-height: 40vh;
+}
+
+.cine__inner {
+  padding: 64px 20px;
 }

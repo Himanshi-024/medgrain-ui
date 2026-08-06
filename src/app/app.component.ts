@@ -10,6 +10,7 @@ import { BusinessComponent } from './components/business/business.component';
 import { VisionPresenceComponent } from './components/vision-presence/vision-presence.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CareerComponent } from './components/career/career.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { FooterComponent } from './components/footer/footer.component';
     VisionPresenceComponent,
     ContactComponent,
     FooterComponent,
+    CareerComponent
   ],
   templateUrl: './app.component.html',
 })

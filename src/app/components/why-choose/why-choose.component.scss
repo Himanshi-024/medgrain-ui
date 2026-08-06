@@ -38,5 +38,13 @@
 }
 
 @media (max-width: 900px) {
-  .why-grid { grid-template-columns: 1fr; }
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-card {
+    padding: 26px 22px;
+  }
 }

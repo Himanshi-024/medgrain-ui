@@ -29,8 +29,13 @@
 }
 
 @keyframes kenburns {
-  from { transform: scale(1.08); }
-  to { transform: scale(1); }
+  from {
+    transform: scale(1.08);
+  }
+
+  to {
+    transform: scale(1);
+  }
 }
 
 .hero__overlay {
@@ -47,10 +52,17 @@
   padding: 170px 0 120px;
 }
 
-.hero__content { max-width: 620px; }
+.hero__content {
+  max-width: 620px;
+}
 
-.eyebrow--light { color: var(--wheat-light); }
-.eyebrow--light::before { background: var(--wheat-light); }
+.eyebrow--light {
+  color: var(--wheat-light);
+}
+
+.eyebrow--light::before {
+  background: var(--wheat-light);
+}
 
 .hero__content h1 {
   font-size: clamp(38px, 5.6vw, 64px);
@@ -86,7 +98,10 @@
   border-top: 1px solid rgba(250, 247, 238, 0.24);
 }
 
-.hero__stats div { display: flex; flex-direction: column; }
+.hero__stats div {
+  display: flex;
+  flex-direction: column;
+}
 
 .hero__stats dt {
   font-family: var(--font-display);
@@ -151,14 +166,73 @@
 }
 
 @keyframes scrollDot {
-  0% { opacity: 1; top: 8px; }
-  70% { opacity: 0; top: 22px; }
-  100% { opacity: 0; top: 22px; }
+  0% {
+    opacity: 1;
+    top: 8px;
+  }
+
+  70% {
+    opacity: 0;
+    top: 22px;
+  }
+
+  100% {
+    opacity: 0;
+    top: 22px;
+  }
 }
 
 @media (max-width: 900px) {
-  .hero { min-height: 100vh; }
-  .hero__inner { padding: 140px 0 100px; }
-  .hero__stats { gap: 28px; flex-wrap: wrap; }
-  .hero__dots { display: none; }
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero__inner {
+    padding: 140px 0 100px;
+  }
+
+  .hero__stats {
+    gap: 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero__dots {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero__inner {
+    padding: 120px 0 80px;
+  }
+
+  .hero__actions {
+    flex-direction: column;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
+
+  .hero__stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 16px;
+    margin-top: 40px;
+    padding-top: 24px;
+  }
+
+  .hero__scroll {
+    display: none;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero__content h1 {
+    font-size: 34px;
+  }
+
+  .hero__sub {
+    font-size: 16px;
+  }
 }

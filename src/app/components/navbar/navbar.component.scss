@@ -33,7 +33,9 @@
   transition: color 0.3s ease;
 }
 
-.nav--scrolled .nav__logo { color: var(--soil); }
+.nav--scrolled .nav__logo {
+  color: var(--soil);
+}
 
 .nav__mark {
   width: 40px;
@@ -57,10 +59,17 @@
   transition: color 0.2s ease;
 }
 
-.nav--scrolled .nav__links a { color: var(--soil-soft); }
+.nav--scrolled .nav__links a {
+  color: var(--soil-soft);
+}
 
-.nav__links a:hover { color: var(--husk); }
-.nav--scrolled .nav__links a:hover { color: var(--soil); }
+.nav__links a:hover {
+  color: var(--husk);
+}
+
+.nav--scrolled .nav__links a:hover {
+  color: var(--soil);
+}
 
 .nav__cta {
   background: var(--grain);
@@ -70,7 +79,9 @@
   font-weight: 600;
 }
 
-.nav__cta:hover { background: #8a4c2d; }
+.nav__cta:hover {
+  background: #8a4c2d;
+}
 
 .nav__toggle {
   display: none;
@@ -89,7 +100,9 @@
 }
 
 @media (max-width: 860px) {
-  .nav__toggle { display: flex; }
+  .nav__toggle {
+    display: flex;
+  }
 
   .nav__links {
     position: absolute;
@@ -120,5 +133,38 @@
     margin: 16px 24px;
     text-align: center;
     display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 16px 0;
+  }
+
+  .nav--scrolled {
+    padding: 12px 0;
+  }
+
+  .nav__mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav__word {
+    font-size: 18px;
+  }
+
+  .nav__links a {
+    padding: 14px 18px;
+  }
+
+  .nav__cta {
+    margin: 14px 18px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav__word {
+    display: none;
   }
 }

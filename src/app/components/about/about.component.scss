@@ -43,7 +43,9 @@
   line-height: 1.5;
 }
 
-.owners-card li:first-child { border-top: none; }
+.owners-card li:first-child {
+  border-top: none;
+}
 
 .leadership {
   margin-top: 100px;
@@ -102,6 +104,34 @@
 }
 
 @media (max-width: 900px) {
-  .about__grid { grid-template-columns: 1fr; }
-  .leader-grid { grid-template-columns: 1fr; }
+  .about__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .leader-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .about__lead {
+    font-size: 17px;
+  }
+
+  .about__quote {
+    padding: 18px 20px;
+    font-size: 16px;
+  }
+
+  .owners-card {
+    padding: 26px 22px;
+  }
+
+  .leadership {
+    margin-top: 64px;
+  }
+
+  .leader-card {
+    padding: 26px 22px;
+  }
 }

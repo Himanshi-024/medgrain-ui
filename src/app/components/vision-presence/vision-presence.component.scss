@@ -17,7 +17,9 @@
   margin-bottom: 14px;
 }
 
-.vision-card p { color: var(--soil-soft); }
+.vision-card p {
+  color: var(--soil-soft);
+}
 
 .vision-card__formula {
   margin-top: 18px;
@@ -33,7 +35,10 @@
   font-size: 14.5px;
   color: var(--soil);
 }
-.vision-card__list li:first-child { border-top: none; }
+
+.vision-card__list li:first-child {
+  border-top: none;
+}
 
 .presence {
   background: var(--husk-deep);
@@ -92,7 +97,32 @@
 }
 
 @media (max-width: 900px) {
-  .vision-grid { grid-template-columns: 1fr; }
-  .presence { grid-template-columns: 1fr; }
-  .presence__states { border-left: none; padding-left: 0; border-top: 1px solid var(--line); padding-top: 24px; }
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .presence {
+    grid-template-columns: 1fr;
+  }
+
+  .presence__states {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-card {
+    padding: 26px 22px;
+  }
+
+  .presence {
+    padding: 26px 22px;
+  }
+
+  .presence__row {
+    gap: 22px;
+  }
 }

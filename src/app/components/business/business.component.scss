@@ -19,7 +19,9 @@
   border: 1px solid var(--line);
 }
 
-.business-card--gold p { color: var(--soil-soft); }
+.business-card--gold p {
+  color: var(--soil-soft);
+}
 
 .business-card--dark {
   position: relative;
@@ -45,14 +47,22 @@
   background: linear-gradient(180deg, rgba(32, 36, 29, 0.75), rgba(32, 36, 29, 0.97));
 }
 
-.business-card--dark > * {
+.business-card--dark>* {
   position: relative;
   z-index: 1;
 }
 
-.business-card--dark p { color: rgba(250, 246, 236, 0.72); }
-.business-card--dark .eyebrow--light { color: var(--wheat-light); }
-.business-card--dark .eyebrow--light::before { background: var(--wheat-light); }
+.business-card--dark p {
+  color: rgba(250, 246, 236, 0.72);
+}
+
+.business-card--dark .eyebrow--light {
+  color: var(--wheat-light);
+}
+
+.business-card--dark .eyebrow--light::before {
+  background: var(--wheat-light);
+}
 
 .business-card__list {
   margin: 22px 0 30px;
@@ -96,6 +106,21 @@
 }
 
 @media (max-width: 900px) {
-  .business-grid { grid-template-columns: 1fr; }
-  .business-card__list { grid-template-columns: 1fr; }
+  .business-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-card__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .business-card {
+    padding: 30px 24px;
+  }
+
+  .business-card h3 {
+    font-size: 23px;
+  }
 }
