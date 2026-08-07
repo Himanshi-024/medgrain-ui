@@ -1,4 +1,4 @@
-<section id="about" class="section about">
+<!-- <section id="about" class="section about">
   <div class="container">
     <div class="about__grid">
       <div appReveal>
@@ -18,6 +18,61 @@
         <blockquote class="about__quote">
           “From carefully selected grains to your kitchen — quality you can trust in
           every pack.”
+        </blockquote>
+      </div>
+
+      <div class="owners-card" [appReveal]="150">
+        <h3>Owners</h3>
+        <ul>
+          <li *ngFor="let o of owners">{{ o }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="leadership">
+      <div class="section-head" appReveal>
+        <p class="eyebrow">Our Leadership Team</p>
+        <h2>The people behind Medgrain</h2>
+        <p>
+          Our leadership team combines expertise in business strategy, manufacturing,
+          quality, legal compliance and operations, working together to deliver
+          high-quality products and build lasting customer trust.
+        </p>
+      </div>
+
+      <div class="leader-grid">
+        <article class="leader-card" *ngFor="let l of leaders; let i = index" [appReveal]="i * 120">
+          <div class="leader-card__avatar">{{ l.name.charAt(0) }}</div>
+          <h4>{{ l.name }}</h4>
+          <p class="leader-card__role">{{ l.role }}</p>
+          <p class="leader-card__bio">{{ l.bio }}</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section id="about" class="section about">
+  <div class="container">
+    <div class="about__grid">
+      <div appReveal>
+        <p class="eyebrow">About Medgrain</p>
+        <h2>Premium quality flour for every Indian kitchen</h2>
+        <p class="about__lead">
+          Medgrain is a flour and food products brand of Sustainzy Agro Industries LLP,
+          committed to delivering quality food products with a focus on purity,
+          nutrition, hygiene and consistency.
+        </p>
+        <p>
+          Our products are manufactured with carefully selected raw materials and
+          processed under hygienic conditions using modern food-processing technology.
+          We aim to make quality flour accessible to households, retailers, restaurants,
+          institutions and food businesses across India.
+        </p>
+        <blockquote class="about__quote">
+          "From carefully selected grains to your kitchen — quality you can trust in
+          every pack."
         </blockquote>
       </div>
 
