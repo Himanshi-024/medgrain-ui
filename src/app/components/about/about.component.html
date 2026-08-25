@@ -53,6 +53,82 @@
 </section> -->
 
 
+<!-- <section id="about" class="section about">
+  <div class="container">
+    <div class="about__grid">
+      <div appReveal>
+        <p class="eyebrow">About Medgrain</p>
+        <h2>Premium quality flour for every Indian kitchen</h2>
+        <p class="about__lead">
+          Medgrain is a flour and food products brand of Sustainzy Agro Industries LLP,
+          committed to delivering quality food products with a focus on purity,
+          nutrition, hygiene and consistency.
+        </p>
+        <p>
+          Our products are manufactured with carefully selected raw materials and
+          processed under hygienic conditions using modern food-processing technology.
+          We aim to make quality flour accessible to households, retailers, restaurants,
+          institutions and food businesses across India.
+        </p>
+        <blockquote class="about__quote">
+          "From carefully selected grains to your kitchen — quality you can trust in
+          every pack."
+        </blockquote>
+        <div class="about__parent">
+          <img src="assets/images/sustainzy-logo.jpeg" alt="Sustainzy Agro Industries LLP" />
+          <div>
+            <span class="about__parent-label">A brand of</span>
+            <span class="about__parent-name">Sustainzy Agro Industries LLP</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="owners-card" [appReveal]="150">
+        <h3>Owners</h3>
+        <ul>
+          <li *ngFor="let o of owners">{{ o }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="packaging" appReveal>
+      <div class="packaging__text">
+        <p class="eyebrow">Our Packaging</p>
+        <h3>Sealed for freshness, made for trust</h3>
+        <p>Every pack carries complete nutritional information, FSSAI details and batch tracking — so you always know
+          exactly what you're bringing home.</p>
+      </div>
+      <div class="packaging__shots">
+        <img src="assets/images/packaging.jpeg" alt="Medgrain Wheat Flour packaging — front" [appReveal]="80" />
+      </div>
+    </div>
+
+    <div class="leadership">
+      <div class="section-head" appReveal>
+        <p class="eyebrow">Our Leadership Team</p>
+        <h2>The people behind Medgrain</h2>
+        <p>
+          Our leadership team combines expertise in business strategy, manufacturing,
+          quality, legal compliance and operations, working together to deliver
+          high-quality products and build lasting customer trust.
+        </p>
+      </div>
+
+      <div class="leader-grid">
+        <article class="leader-card" *ngFor="let l of leaders; let i = index" [appReveal]="i * 120">
+          <div class="leader-card__avatar">{{ l.name.charAt(0) }}</div>
+          <h4>{{ l.name }}</h4>
+                    <p class="leader-card__role">{{ l.role }}</p>
+          <p class="leader-card__bio">{{ l.bio }}</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>                                                                                                          -->
+
+
+
+===about html===
 <section id="about" class="section about">
   <div class="container">
     <div class="about__grid">
@@ -74,6 +150,14 @@
           "From carefully selected grains to your kitchen — quality you can trust in
           every pack."
         </blockquote>
+
+        <div class="about__parent">
+          <img src="assets/images/sustainzy-logo.jpeg" alt="Sustainzy Agro Industries LLP" />
+          <div>
+            <span class="about__parent-label">A brand of</span>
+            <span class="about__parent-name">Sustainzy Agro Industries LLP</span>
+          </div>
+        </div>
       </div>
 
       <div class="owners-card" [appReveal]="150">
@@ -81,6 +165,18 @@
         <ul>
           <li *ngFor="let o of owners">{{ o }}</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="packaging" appReveal>
+      <div class="packaging__text">
+        <p class="eyebrow">Our Packaging</p>
+        <h3>Sealed for freshness, made for trust</h3>
+        <p>Every pack carries complete nutritional information, FSSAI details and batch tracking — so you always know
+          exactly what you're bringing home.</p>
+      </div>
+      <div class="packaging__shots">
+        <img src="assets/images/packaging.jpeg" alt="Medgrain Wheat Flour packaging" [appReveal]="80" />
       </div>
     </div>
 

@@ -17,7 +17,7 @@ interface Stat {
 })
 export class HeroComponent implements OnInit, OnDestroy {
   slides = [
-    'https://images.unsplash.com/photo-1561996362-9bf15ec9b89f?q=80&w=1800&auto=format&fit=crop',
+    'assets/images/packaging.jpeg',
     'https://images.unsplash.com/photo-1737091971375-3fff54afa732?q=80&w=1800&auto=format&fit=crop',
     'https://images.unsplash.com/photo-1601387448308-66ae6aa1f1f7?q=80&w=1800&auto=format&fit=crop',
   ];
@@ -30,6 +30,7 @@ export class HeroComponent implements OnInit, OnDestroy {
     { label: 'Max Pack Size', target: 50, suffix: 'kg', value: 0 },
   ];
   private countTimer?: ReturnType<typeof setInterval>;
+  packSizes = ['5 kg', '10 kg', '26 kg', '30 kg', '50 kg'];
 
   ngOnInit() {
     this.slideTimer = setInterval(() => {

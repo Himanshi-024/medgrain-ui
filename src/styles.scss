@@ -669,37 +669,39 @@
    variables, so updating them here re-skins the whole site.
    ========================================================= */
 :root {
+  // --husk: #FFFBF3;
+  // --husk-deep: #F5E9CE;
+  // --card: #FFFFFF;
+  // --soil: #1B1F16;
+  // --soil-soft: #5B5E4C;
+  // --wheat: #E2A63C;
+  // --wheat-light: #FFD873;
+  // --crop: #4C8B2C;
+  // --crop-deep: #1E2B16;
+  // --grain: #C1651B;
+  // --grain-deep: #8F4712;
+  // --line: rgba(27, 31, 22, 0.12);
+  // --line-soft: rgba(255, 251, 243, 0.18);
+
   /* Base surfaces */
-  --husk: #FFFBF3;
-  /* warm cream base background */
-  --husk-deep: #F5E9CE;
-  /* secondary section background */
+  --husk: #FBF8EF;
+  --husk-deep: #EFE6C8;
   --card: #FFFFFF;
-  /* card surface — pure white for pop against cream */
 
   /* Ink */
-  --soil: #1B1F16;
-  /* deep charcoal-green — primary text */
-  --soil-soft: #5B5E4C;
-  /* secondary text */
+  --soil: #12201A;
+  --soil-soft: #50604F;
 
-  /* Brand accents */
-  --wheat: #E2A63C;
-  /* gold wheat */
-  --wheat-light: #FFD873;
-  /* highlight / hover */
+  /* Brand accents — matched to the Medgrain emblem & packaging (forest green + gold wheat) */
+  --wheat: #E0A83E;
+  --wheat-light: #F5CC70;
   --crop: #4C8B2C;
-  /* leaf green — secondary accent */
-  --crop-deep: #1E2B16;
-  /* deep forest — dark panels */
-  --grain: #C1651B;
-  /* burnt amber — primary CTA accent */
-  --grain-deep: #8F4712;
-  /* pressed / hover amber */
+  --crop-deep: #06321D;      /* was #1E2B16 → now sampled from real packaging banner */
+  --grain: #1E6B3C;          /* was amber #C1651B → now forest green (primary CTA) */
+  --grain-deep: #0B4223;     /* was amber #8F4712 */
 
-  /* Lines & overlays */
-  --line: rgba(27, 31, 22, 0.12);
-  --line-soft: rgba(255, 251, 243, 0.18);
+  --line: rgba(18, 32, 26, 0.12);
+  --line-soft: rgba(251, 248, 239, 0.18);
 
   /* Shadows — consistent elevation system */
   --shadow-sm: 0 2px 10px rgba(27, 31, 22, 0.06);
@@ -893,7 +895,7 @@ button {
 
 .btn-primary:hover {
   background: linear-gradient(135deg, var(--grain-deep) 0%, var(--grain) 100%);
-  box-shadow: 0 12px 28px rgba(193, 101, 27, 0.34);
+  box-shadow: 0 12px 28px rgba(30, 107, 60, 0.34);
 }
 
 .btn-outline {
@@ -1009,15 +1011,15 @@ button {
 
 @keyframes pulseRing {
   0% {
-    box-shadow: 0 0 0 0 rgba(193, 101, 27, 0.55);
+    box-shadow: 0 0 0 0 rgba(30, 107, 60, 0.55);
   }
 
   70% {
-    box-shadow: 0 0 0 14px rgba(193, 101, 27, 0);
+    box-shadow: 0 0 0 14px rgba(30, 107, 60, 0);
   }
 
   100% {
-    box-shadow: 0 0 0 0 rgba(193, 101, 27, 0);
+    box-shadow: 0 0 0 0 rgba(30, 107, 60, 0);
   }
 }
 

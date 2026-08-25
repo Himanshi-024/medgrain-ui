@@ -1,11 +1,7 @@
 <section id="top" class="hero">
   <div class="hero__slides" aria-hidden="true">
-    <div
-      class="hero__slide"
-      *ngFor="let slide of slides; let i = index"
-      [class.is-active]="i === activeSlide"
-      [style.background-image]="'url(' + slide + ')'"
-    ></div>
+    <div class="hero__slide" *ngFor="let slide of slides; let i = index" [class.is-active]="i === activeSlide"
+      [style.background-image]="'url(' + slide + ')'"></div>
     <div class="hero__overlay"></div>
   </div>
 
@@ -17,6 +13,12 @@
         Premium quality flour made with carefully selected grains and processed
         with care — for homes, restaurants and food businesses across India.
       </p>
+      <div class="hero__packs">
+        <span class="hero__packs-label">Available in</span>
+        <span class="hero__packs-list">
+          <span *ngFor="let size of packSizes" class="hero__pack-chip">{{ size }}</span>
+        </span>
+      </div>
       <div class="hero__actions">
         <a href="#products" class="btn btn-primary">Explore Our Products</a>
         <a href="#contact" class="btn btn-ghost-light">Contact Us</a>
@@ -30,13 +32,17 @@
     </div>
   </div>
 
+  <!-- <div class="hero__badge">
+    <span class="hero__badge-icon">✓</span>
+    <div>
+      <strong>FSSAI Certified</strong>
+      <span>Quality tested &amp; approved</span>
+    </div>
+  </div> -->
+
   <div class="hero__dots">
-    <button
-      *ngFor="let slide of slides; let i = index"
-      [class.is-active]="i === activeSlide"
-      (click)="activeSlide = i"
-      [attr.aria-label]="'Show slide ' + (i + 1)"
-    ></button>
+    <button *ngFor="let slide of slides; let i = index" [class.is-active]="i === activeSlide" (click)="activeSlide = i"
+      [attr.aria-label]="'Show slide ' + (i + 1)"></button>
   </div>
 
   <a href="#about" class="hero__scroll" aria-label="Scroll to About">

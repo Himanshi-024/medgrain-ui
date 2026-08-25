@@ -61,11 +61,17 @@ interface Leader {
 })
 export class AboutComponent {
   owners = [
+    'Mr. Deepak Sahu — Co-Founder & Director',
     'Mr. Ankit Kumar Mishra — Co-Founder & Director',
     'Mr. Devendra Singh Shaktawat — Co-Founder & Director',
   ];
 
   leaders: Leader[] = [
+    {
+      name: 'Deepak Sahu',
+      role: 'Executive Director – Business Operations, Quality & Strategy',
+      bio: 'Provides strategic leadership for business operations, quality management, business development and organizational growth, with a vision to establish Medgrain as a trusted food brand.',
+    },
     {
       name: 'Ankit Kumar Mishra',
       role: 'Head – Legal, Purchase, Marketing & Documentation',

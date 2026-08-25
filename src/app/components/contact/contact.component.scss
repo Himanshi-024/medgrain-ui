@@ -318,22 +318,27 @@
 }
 
 .contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
 }
 
 .contact-info p {
   color: var(--soil-soft);
 }
 
-/* Two big, unmistakable contact options: WhatsApp + Email */
 .contact-options {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 30px;
+  text-align: left;
 }
 
 .contact-option {
@@ -404,13 +409,13 @@
 }
 
 .contact-option--email .contact-option__icon {
-  background: rgba(193, 101, 27, 0.14);
+  background: rgba(30, 107, 60, 0.14);
   color: var(--grain-deep);
 }
 
 .contact-option--email:hover {
   border-color: var(--grain);
-  background: rgba(193, 101, 27, 0.05);
+  background: rgba(30, 107, 60, 0.05);
 }
 
 .contact-option--email:hover .contact-option__arrow {
@@ -480,7 +485,12 @@
 
 @media (max-width: 900px) {
   .contact-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-info {
+    max-width: 100%;
   }
 }
 

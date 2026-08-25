@@ -291,7 +291,7 @@
   padding: 11px 24px;
   border-radius: 999px;
   font-weight: 600;
-  box-shadow: 0 6px 16px rgba(193, 101, 27, 0.3);
+  box-shadow: 0 6px 16px rgba(30, 107, 60, 0.3);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -303,7 +303,7 @@
 
 .nav__cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(193, 101, 27, 0.42);
+  box-shadow: 0 10px 24px rgba(30, 107, 60, 0.42);
 }
 
 .nav__toggle {
